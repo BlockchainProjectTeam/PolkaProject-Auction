@@ -39,6 +39,9 @@ export default {
       url: "https://",
     };
   },
+  created() {
+    this.$loading(0);
+  },
   methods: {
     submit() {
       if (!this.owner) {
@@ -73,19 +76,20 @@ export default {
         .post(this.domain + "submit_crowdloan_info", formData)
         .then((res) => {
           if (res.data.code == 0) {
-            this.$toast("Submit Success");
-            this.name = "";
-            this.owner = "";
-            this.parachain = "";
-            this.token = "";
-            this.reward = "";
-            this.url = "https://";
+            this.$toast("Submit Success", 2000).then(() => {
+              this.name = "";
+              this.owner = "";
+              this.parachain = "";
+              this.token = "";
+              this.reward = "";
+              this.url = "https://";
+            });
           } else {
             this.$toast(res.data.message);
           }
           this.$loading(0);
         })
-        .catch((err) => {
+        .catch(() => {
           this.$loading(0);
           this.$toast("ERROR");
         });
