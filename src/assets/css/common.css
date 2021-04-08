@@ -1,0 +1,411 @@
+@font-face {
+  font-family: Rubik-Regular;
+  src: url("fonts/Rubik-Regular.ttf");
+}
+
+@font-face {
+  font-family: Rubik-Medium;
+  src: url("fonts/Rubik-Medium.ttf");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font: normal 14px/1.5 Rubik-Regular;
+  color: #000;
+  background: #fff5fa;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* 解决IOS默认滑动很卡的情况 */
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+}
+
+body {
+  padding-top: 64px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p,
+div,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+  outline: 0;
+  cursor: pointer;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+img,
+span {
+  vertical-align: middle;
+  border-style: none;
+}
+
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  resize: none;
+  -webkit-tap-highlight-color: transparent;
+  border: none;
+  background: #ededef;
+}
+
+
+/*去掉数字上下箭头*/
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input:focus,
+button:focus,
+select:focus {
+  outline: none;
+}
+
+.wh100 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  max-width: 976px;
+  padding: 0 16px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.collapse-close,
+.menu {
+  display: none;
+}
+
+.border-btn {
+  border: 1px solid #fff;
+  border-radius: 16px;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+section.container {
+  padding: 48px 16px;
+}
+
+nav+section {
+  min-height: calc(100vh - 200px);
+}
+
+h1 {
+  font: 700 64px/1 Rubik-Medium;
+}
+
+h2 {
+  font: 700 32px/1.25 Rubik-Medium;
+}
+
+h2.part-title {
+  margin-bottom: 32px;
+}
+
+h3 {
+  font: 700 24px/32px Rubik-Medium;
+}
+
+h4 {
+  font: 700 16px/1.5 Rubik-Medium;
+}
+
+.pointer {
+  cursor: pointer;
+  user-select: none;
+}
+
+.text-hot-pink {
+  color: #e6007a!important;
+  cursor: pointer;
+}
+
+.text-pint-12 {
+  color: #e6007a!important;
+  font: 700 12px/16px Rubik-Medium;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+
+.bgfff-box {
+  background: #fff;
+  padding: 32px 0;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-align-top {
+  display: flex;
+  align-items: flex-start;
+}
+
+.pink-btn {
+  padding: 8px 64px;
+  display: inline-block;
+  border-radius: 20px;
+  color: #fff;
+  background: #ff57b0;
+  font: 700 16px/1.5 Rubik-Medium;
+}
+
+input,
+textarea {
+  display: block;
+  line-height: 24px;
+  width: 100%;
+  font-size: 16px;
+  background: #fff5fa;
+  border-radius: 20px;
+  padding: 8px 16px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group .ab-right {
+  position: absolute;
+  right: 16px;
+  top: 8px;
+  cursor: pointer;
+}
+
+header {
+  background: #e6007a;
+  color: #fff;
+}
+
+header .container {
+  padding: 96px 16px 88px;
+  background: url(../img/banner/plo.png) no-repeat right bottom/50%;
+}
+
+header h1.container {
+  padding: 167px 16px;
+}
+
+.search-box {
+  padding: 48px 0 24px;
+}
+
+.search {
+  width: 192px;
+  border: 1px solid #a7a7a7;
+  border-radius: 16px;
+  padding: 8px 16px 8px 36px;
+  background: url(../img/icon/search_gray.png) no-repeat left 16px center/16px;
+  font: 700 14px/16px Rubik-Medium;
+}
+
+.search-box img {
+  margin: 0;
+}
+
+.table-title {
+  color: #a7a7a7;
+  font: 700 14px/16px Rubik-Medium;
+  padding: 0 16px;
+}
+
+.table-title li:nth-child(4) {
+  cursor: pointer;
+  user-select: none;
+}
+
+.table-list {
+  cursor: pointer;
+  padding: 16px;
+  margin-top: 8px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.table-list:hover {
+  box-shadow: 0 2px 8px 0 rgba(255, 87, 176, 0.5);
+}
+
+.flex-align-top img,
+.flex-align-center img {
+  margin-right: 16px;
+}
+
+.progress {
+  width: 100%;
+  height: 12px;
+  background: #fff5fa;
+  border-radius: 2px;
+  margin-bottom: 4px;
+  position: relative;
+}
+
+.progress span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #ff57b0;
+}
+
+.font-grey-medium {
+  font: 700 14px/16px Rubik-Medium;
+  color: #a7a7a7;
+}
+
+.table-list h6 {
+  font: 700 12px/16px Rubik-Medium;
+  color: #a7a7a7;
+  margin-bottom: 4px;
+}
+
+.fold-parent {
+  padding: 0 38px 0 0;
+  background: url(../img/icon/downward_gray.png) no-repeat right center/20px;
+}
+
+.fold-parent.open {
+  background-image: url(../img/icon/upward_gray.png);
+}
+
+.fold-child ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 16px;
+  position: relative;
+  margin-top: 16px;
+}
+
+.fold-child ul:after {
+  content: "";
+  position: absolute;
+  left: -16px;
+  right: -16px;
+  top: 0;
+  bottom: 0;
+  border-bottom: 1px solid #fff5fa;
+  border-top: 1px solid #fff5fa;
+}
+
+.fold-child li {
+  width: 50%;
+  padding-top: 16px;
+}
+
+.fold-child .progress {
+  width: 60%;
+}
+
+.fold-child a {
+  display: block;
+  padding-top: 16px;
+  text-align: center;
+  font: 700 16px/20px Rubik-Medium;
+  color: #ff57b0;
+}
+
+
+/*小于768px屏幕 手机 xs*/
+
+@media (max-width: 768px) {
+  section.container {
+    padding: 32px 16px;
+  }
+  header .container {
+    padding: 32px 16px 280px;
+    background: url(../img/banner/plo.png) no-repeat center bottom/auto 280px;
+  }
+  header h1.container {
+    padding: 32px 16px 280px;
+    text-align: center;
+    font-size: 48px;
+  }
+  .pc-list {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-list {
+    display: none;
+  }
+}
