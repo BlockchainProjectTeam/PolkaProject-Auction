@@ -249,6 +249,7 @@ textarea {
   right: 16px;
   top: 8px;
   cursor: pointer;
+  margin: 0;
 }
 
 header {
