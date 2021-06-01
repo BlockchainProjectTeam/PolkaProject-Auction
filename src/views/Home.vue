@@ -238,7 +238,7 @@ export default {
     },
     searchProject() {
       let searchVal = this.searchVal.trim().toLowerCase();
-      if (searchVal) {
+      if (searchVal&&this.projects&&this.projects.length>0) {
         this.currentProjects = this.projects.filter((v) => {
           return (
             String(v?.paraID).includes(searchVal) ||
